@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: raw_news
+        columns:
+          - name: ticker
+            tests: [not_null]
+          - name: published_at
+            tests: [not_null]
+      - name: raw_prices
+        columns:
+          - name: ticker
+            tests: [not_null]
+          - name: close
+            tests: [not_null]
+
+models:
+  - name: daily_news
+    columns:
+      - name: ticker
+        tests: [not_null]
+      - name: d
+        tests: [not_null]
+  - name: features
+    columns:
+      - name: ticker
+        tests: [not_null]
+      - name: d
+        tests: [not_null]
+      - name: range_pct
+        tests: [not_null]

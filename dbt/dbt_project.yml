@@ -1,0 +1,7 @@
+name: jpvol
+version: "1.0"
+profile: jpvol
+model-paths: ["models"]
+models:
+  jpvol:
+    +materialized: table
